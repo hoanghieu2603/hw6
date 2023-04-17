@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>隨機更改元素文本</title>
+	<style>
+		.container {
+			margin: 50px auto;
+			max-width: 500px;
+			text-align: center;
+		}
+		.button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 20px;
+			margin-top: 50px;
+		}
+		.text {
+			font-size: 24px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<button class="button" onclick="changeText()">更改文本</button>
+	<div class="container">
+		<p class="text">點擊按鈕來更改這段文本。</p>
+	</div>
+	<script>
+		function changeText() {
+			var texts = ["這是第一個隨機文本。", "這是第二個隨機文本。", "這是第三個隨機文本。", "這是第四個隨機文本。"];
+			var randomText = texts[Math.floor(Math.random() * texts.length)];
+			document.querySelector(".text").innerHTML = randomText;
+		}
+	</script>
+</body>
+</html>
